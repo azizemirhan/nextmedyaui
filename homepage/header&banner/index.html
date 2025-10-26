@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Ticaret Pro - Dijital Dönüşümün Adresi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Mobile Top Banner -->
+    <div class="mobile-top-banner">
+        <div class="gradient-overlay"></div>
+        <div class="banner-inner">
+            <div class="banner-content">
+                <span>E-ticaret ile tanışmaya hazır mısın?</span>
+            </div>
+            <div class="banner-actions">
+                <a href="#" class="banner-btn">Toplantı Planla</a>
+                <a href="#" class="banner-btn ghost">Sizi Arayalım</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop Top Banner -->
+    <div class="desktop-top-banner">
+        <div class="gradient-overlay"></div>
+        <div class="container">
+            <div class="banner-inner">
+                <div class="banner-content">
+                    <span>E-ticaret ile tanışmaya hazır mısın?</span>
+                </div>
+                <div class="banner-actions">
+                    <a href="#" class="banner-btn">🗓️ Toplantı Planla</a>
+                    <a href="#" class="banner-btn ghost">📞 Sizi Arayalım</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Bar (Desktop) -->
+    <div class="top-bar desktop-only">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <span class="promo-text">🎯 %70'e Varan İndirimle E-Ticaret Paketleri</span>
+                </div>
+                <div class="top-bar-right">
+                    <a href="tel:08508111122" class="phone-link">📞 0850 811 11 22</a>
+                    <a href="#" class="cta-link">💰 Sizi Arayalım</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">E-TicaretPro</span>
+                </div>
+                
+                <ul class="nav-menu desktop-only">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">
+                            E-Ticaret <span class="dropdown-arrow">▼</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#">Başlangıç Paketi</a>
+                            <a href="#">Profesyonel Paket</a>
+                            <a href="#">Kurumsal Paket</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">
+                            Hizmetlerimiz <span class="dropdown-arrow">▼</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#">SEO Hizmetleri</a>
+                            <a href="#">Dijital Pazarlama</a>
+                            <a href="#">Web Tasarım</a>
+                            <a href="#">Sosyal Medya Yönetimi</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Fiyatlar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Referanslar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">İletişim</a>
+                    </li>
+                </ul>
+
+                <div class="header-actions desktop-only">
+                    <button class="btn-secondary">Giriş Yap</button>
+                    <button class="btn-primary">Ücretsiz Deneyin</button>
+                </div>
+
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar Menu -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">E-TicaretPro</span>
+            </div>
+            <div class="sidebar-flags">
+                <button class="flag-btn active">🇹🇷</button>
+                <button class="close-sidebar" id="closeSidebar">✕</button>
+            </div>
+        </div>
+
+        <div class="sidebar-tagline">
+            E-ticaret ile tanışma çok kolay!
+        </div>
+
+        <div class="sidebar-menu">
+            <div class="sidebar-item expandable">
+                <button class="sidebar-link" data-expand="eticaret">
+                    <span>E-Ticaret</span>
+                    <span class="expand-arrow">▼</span>
+                </button>
+                <div class="sidebar-submenu" id="eticaret">
+                    <a href="#">Başlangıç Paketi</a>
+                    <a href="#">Profesyonel Paket</a>
+                    <a href="#">Kurumsal Paket</a>
+                    <a href="#">Özel Çözümler</a>
+                </div>
+            </div>
+
+            <div class="sidebar-item expandable">
+                <button class="sidebar-link" data-expand="hizmetler">
+                    <span>Hizmetlerimiz</span>
+                    <span class="expand-arrow">▼</span>
+                </button>
+                <div class="sidebar-submenu" id="hizmetler">
+                    <a href="#">SEO Hizmetleri</a>
+                    <a href="#">Dijital Pazarlama</a>
+                    <a href="#">Web Tasarım</a>
+                    <a href="#">Sosyal Medya Yönetimi</a>
+                    <a href="#">E-posta Pazarlama</a>
+                    <a href="#">İçerik Üretimi</a>
+                </div>
+            </div>
+
+            <div class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <span>Geliştirmelerimiz</span>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+
+            <div class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <span>Referanslar</span>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+
+            <div class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <span>Akademi</span>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+
+            <div class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <span>İletişim</span>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="sidebar-bottom">
+            <div class="team-section">
+                <h3>Dijital Dünyada</h3>
+                <p><strong>Tüm Adımlarınızda Yanınızdayız!</strong></p>
+                <div class="team-avatars">
+                    <div class="avatar-circle">
+                        <img src="https://via.placeholder.com/60" alt="Team 1">
+                    </div>
+                    <div class="avatar-circle">
+                        <img src="https://via.placeholder.com/60" alt="Team 2">
+                    </div>
+                    <div class="avatar-circle">
+                        <img src="https://via.placeholder.com/60" alt="Team 3">
+                    </div>
+                    <div class="avatar-circle">
+                        <img src="https://via.placeholder.com/60" alt="Team 4">
+                    </div>
+                    <div class="avatar-circle">
+                        <img src="https://via.placeholder.com/60" alt="Team 5">
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-actions">
+                <button class="sidebar-btn primary">
+                    <span class="btn-icon">📋</span>
+                    Ücretsiz Analiz Alın
+                </button>
+                <button class="sidebar-btn secondary">
+                    <span class="btn-icon">📞</span>
+                    Sizi Arayalım
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span class="badge-icon">🏆</span>
+                        <span>Türkiye'nin #1 E-Ticaret Altyapısı</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Dijitalleşmeye<br>
+                        <span class="highlight">Hazır Mısınız?</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        Türkiye'nin en iyi müşteri hizmetlerine sahip ödüllü e-ticaret altyapısı. 
+                        36.000'den fazla işletme bizimle büyüyor!
+                    </p>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">36.000+</span>
+                            <span class="stat-label">Mutlu Müşteri</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">₺2.3M+</span>
+                            <span class="stat-label">Toplam Satış</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">%99.9</span>
+                            <span class="stat-label">Uptime Oranı</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <button class="btn-large-primary">
+                            🚀 Hemen Başlayın
+                        </button>
+                        <button class="btn-large-secondary">
+                            💬 Sizi Arayalım
+                        </button>
+                    </div>
+
+                    <div class="trust-badges">
+                        <span class="trust-text">Güvenilir Ortaklarımız:</span>
+                        <div class="brand-logos">
+                            <span class="brand-logo">LOGO1</span>
+                            <span class="brand-logo">LOGO2</span>
+                            <span class="brand-logo">LOGO3</span>
+                            <span class="brand-logo">LOGO4</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="visual-container">
+                        <div class="floating-card card-1">
+                            <div class="card-icon">📊</div>
+                            <div class="card-text">
+                                <span class="card-value">+%75</span>
+                                <span class="card-label">Satış Artışı</span>
+                            </div>
+                        </div>
+                        
+                        <div class="floating-card card-2">
+                            <div class="card-icon">👥</div>
+                            <div class="card-text">
+                                <span class="card-value">1 Yeni</span>
+                                <span class="card-label">Siparişiniz Var!</span>
+                            </div>
+                        </div>
+                        
+                        <div class="main-visual">
+                            <div class="dashboard-preview">
+                                <div class="dashboard-header">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <div class="dashboard-content">
+                                    <div class="chart-container">
+                                        <div class="chart-bar" style="height: 40%"></div>
+                                        <div class="chart-bar" style="height: 65%"></div>
+                                        <div class="chart-bar" style="height: 55%"></div>
+                                        <div class="chart-bar" style="height: 80%"></div>
+                                        <div class="chart-bar" style="height: 90%"></div>
+                                        <div class="chart-bar" style="height: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="decorative-elements">
+                            <div class="shape shape-1"></div>
+                            <div class="shape shape-2"></div>
+                            <div class="shape shape-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Animated Background -->
+        <div class="hero-background">
+            <div class="gradient-bg"></div>
+            <div class="pattern-overlay"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

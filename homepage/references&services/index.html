@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextmedya - Services & References</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f8f9fa;
+            color: #0e1327;
+        }
+
+        /* ==================== SECTION 1: SERVISLER ==================== */
+        .nx-services-wrapper {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .nx-services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nx-services-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .nx-services-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #0e1327;
+            margin-bottom: 16px;
+        }
+
+        .nx-services-subtitle {
+            font-size: 18px;
+            color: #6c757d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .nx-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .nx-service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 20px rgba(14, 19, 39, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nx-service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #1e40af 0%, #3b82f6 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .nx-service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(30, 64, 175, 0.15);
+        }
+
+        .nx-service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .nx-service-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .nx-service-icon {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .nx-service-card-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0e1327;
+            margin-bottom: 16px;
+        }
+
+        .nx-service-card-description {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #6c757d;
+            margin-bottom: 24px;
+        }
+
+        .nx-service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #1e40af;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 15px;
+            transition: gap 0.3s ease;
+        }
+
+        .nx-service-link:hover {
+            gap: 12px;
+        }
+
+        .nx-service-link-arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .nx-service-link:hover .nx-service-link-arrow {
+            transform: translateX(4px);
+        }
+
+        /* ==================== SECTION 2: REFERANSLAR ==================== */
+        .nx-references-wrapper {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .nx-references-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nx-references-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .nx-references-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #0e1327;
+            margin-bottom: 16px;
+        }
+
+        .nx-references-subtitle {
+            font-size: 18px;
+            color: #6c757d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .nx-brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+
+        .nx-brand-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 16px;
+            padding: 40px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 120px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nx-brand-card:hover {
+            border-color: #1e40af;
+            box-shadow: 0 8px 24px rgba(30, 64, 175, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .nx-brand-logo {
+            max-width: 140px;
+            height: auto;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+            filter: grayscale(100%);
+        }
+
+        .nx-brand-card:hover .nx-brand-logo {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 768px) {
+            .nx-services-title,
+            .nx-references-title {
+                font-size: 36px;
+            }
+
+            .nx-services-subtitle,
+            .nx-references-subtitle {
+                font-size: 16px;
+            }
+
+            .nx-services-grid,
+            .nx-brands-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nx-service-card {
+                padding: 30px 24px;
+            }
+        }
+
+        /* ==================== ANIMASYONLAR ==================== */
+        @keyframes nx-fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .nx-service-card,
+        .nx-brand-card {
+            animation: nx-fade-in-up 0.6s ease forwards;
+        }
+
+        .nx-service-card:nth-child(1) { animation-delay: 0.1s; }
+        .nx-service-card:nth-child(2) { animation-delay: 0.2s; }
+        .nx-service-card:nth-child(3) { animation-delay: 0.3s; }
+        .nx-service-card:nth-child(4) { animation-delay: 0.4s; }
+
+        .nx-brand-card:nth-child(1) { animation-delay: 0.05s; }
+        .nx-brand-card:nth-child(2) { animation-delay: 0.1s; }
+        .nx-brand-card:nth-child(3) { animation-delay: 0.15s; }
+        .nx-brand-card:nth-child(4) { animation-delay: 0.2s; }
+        .nx-brand-card:nth-child(5) { animation-delay: 0.25s; }
+        .nx-brand-card:nth-child(6) { animation-delay: 0.3s; }
+        .nx-brand-card:nth-child(7) { animation-delay: 0.35s; }
+        .nx-brand-card:nth-child(8) { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== SECTION 1: SERVİSLER ==================== -->
+    <section id="nx-services-section" class="nx-services-wrapper">
+        <div class="nx-services-container">
+            <div class="nx-services-header">
+                <h2 class="nx-services-title">Hizmetlerimiz</h2>
+                <p class="nx-services-subtitle">Dijital dünyanızı büyütmek için kapsamlı çözümler sunuyoruz</p>
+            </div>
+
+            <div class="nx-services-grid">
+                <div class="nx-service-card" data-nx-service="ecommerce">
+                    <div class="nx-service-icon-wrapper">
+                        <div class="nx-service-icon"></div>
+                    </div>
+                    <h3 class="nx-service-card-title">E-ticaret</h3>
+                    <p class="nx-service-card-description">
+                        E-ticaret operasyonlarınızı büyütmek için yalnızca teknik çözümler değil, stratejik 
+                        adımlar da sunanz. Ürün yönetiminden pazar araştırmasına, reklam kampanyaları ve 
+                        performans takibi dahil tüm süreci sizin için planlarz ve uygularız.
+                    </p>
+                    <a href="#" class="nx-service-link">
+                        Detayları Gör
+                        <span class="nx-service-link-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="nx-service-card" data-nx-service="export">
+                    <div class="nx-service-icon-wrapper">
+                        <div class="nx-service-icon"></div>
+                    </div>
+                    <h3 class="nx-service-card-title">E-ihracat</h3>
+                    <p class="nx-service-card-description">
+                        Yeni pazarlara açılmanızı, globalde satış yapmanızı ve markanızı sınırların ötesine 
+                        taşımanızı sağlıyoruz. Özel stratejilerle, teknik kurulumdan reklam yönetimine kadar 
+                        tüm süreci biz üstleniyoruz.
+                    </p>
+                    <a href="#" class="nx-service-link">
+                        Detayları Gör
+                        <span class="nx-service-link-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="nx-service-card" data-nx-service="consulting">
+                    <div class="nx-service-icon-wrapper">
+                        <div class="nx-service-icon"></div>
+                    </div>
+                    <h3 class="nx-service-card-title">Trendyol Danışmanlık</h3>
+                    <p class="nx-service-card-description">
+                        Trendyol'daki satışlarınızı artırmak için içerikten reklamaya, kampanyadan marka 
+                        yönetimine tüm süreci sizin için yönetiyoruz.
+                    </p>
+                    <a href="#" class="nx-service-link">
+                        Detayları Gör
+                        <span class="nx-service-link-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="nx-service-card" data-nx-service="ugc">
+                    <div class="nx-service-icon-wrapper">
+                        <div class="nx-service-icon"></div>
+                    </div>
+                    <h3 class="nx-service-card-title">UGC & Influencer Marketing</h3>
+                    <p class="nx-service-card-description">
+                        Hedef kitlenize uygun yüzler, yaratıcı senaryolar ve güçlü dağıtım stratejileriyle 
+                        UGC & Influencer pazarlama kampanyalarınızı uçtan uca biz yönetiyoruz.
+                    </p>
+                    <a href="#" class="nx-service-link">
+                        Detayları Gör
+                        <span class="nx-service-link-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 2: REFERANSLAR ==================== -->
+    <section id="nx-references-section" class="nx-references-wrapper">
+        <div class="nx-references-container">
+            <div class="nx-references-header">
+                <h2 class="nx-references-title">Referanslarımız</h2>
+                <p class="nx-references-subtitle">Markaların tercihi olmaktan gurur duyuyoruz.</p>
+            </div>
+
+            <div class="nx-brands-grid">
+                <div class="nx-brand-card" data-nx-brand="aker">
+                    <img src="https://via.placeholder.com/140x40/e9ecef/0e1327?text=AKER" alt="Aker" class="nx-brand-logo">
+                </div>
+
+                <div class="nx-brand-card" data-nx-brand="salomon">
+                    <img src="https://via.placeholder.com/140x40/e9ecef/0e1327?text=SALOMON" alt="Salomon" class="nx-brand-logo">
+                </div>
+
+                <div class="nx-brand-card" data-nx-brand="loris">
+                    <img src="https://via.placeholder.com/140x40/e9ecef/0e1327?text=LORIS" alt="Loris" class="nx-brand-logo">
+                </div>
+
+                <div class="nx-brand-card" data-nx-brand="goodyear">
+                    <img src="https://via.placeholder.com/140x40/e9ecef/0e1327?text=GOODYEAR" alt="Goodyear" class="nx-brand-logo">
+                </div>
+
+                <div class="nx-brand-card" data-nx-brand="tiffany">
+                    <img src="https://via.placeholder.com/140x40/e9ecef/0e1327?text=TIFFANY+TOMATO" alt="Tiffany & Tomato" class="nx-brand-logo">
+                </div>
+
+                <div class="nx-brand-card" data-nx-brand="vivensmoda">
+                    <img src="https://via.placeholder.com/140x40/e9ecef/0e1327?text=VIVENSMODA" alt="Vivensmoda" class="nx-brand-logo">
+                </div>
+
+                <div class="nx-brand-card" data-nx-brand="pierre">
+                    <img src="https://via.placeholder.com/140x40/e9ecef/0e1327?text=PIERRE+CARDIN" alt="Pierre Cardin" class="nx-brand-logo">
+                </div>
+
+                <div class="nx-brand-card" data-nx-brand="bambi">
+                    <img src="https://via.placeholder.com/140x40/e9ecef/0e1327?text=BAMBI" alt="Bambi" class="nx-brand-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
